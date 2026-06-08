@@ -1,0 +1,18 @@
+[
+  {
+    "html": null,
+    "png": "fig_calibration.png"
+  },
+  {
+    "html": null,
+    "png": "fig_quality.png"
+  },
+  {
+    "html": "fig_diversity_cost.html",
+    "png": "fig_diversity_cost.png"
+  },
+  {
+    "html": "fig_pipeline.html",
+    "png": "fig_pipeline.png"
+  }
+]

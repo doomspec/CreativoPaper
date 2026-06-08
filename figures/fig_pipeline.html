@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>El Agente Creativo: experiment pipeline</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1200px;
+    height: 760px;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color: #17202a;
+  }
+  .frame {
+    width: 1200px;
+    height: 760px;
+    box-sizing: border-box;
+    padding: 34px 40px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 760;
+    letter-spacing: 0;
+  }
+  .subtitle {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #44546a;
+  }
+  svg {
+    margin-top: 22px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <h1>El Agente Creativo: experiment pipeline</h1>
+  <div class="subtitle">Matched source-paper groups feed three ideation arms (LLM-only, ReprNet agent, Abstracts agent) into a common-scale evaluation suite.</div>
+  <svg viewBox="0 0 1180 540" role="img"><rect width="100%" height="100%" fill="#fff"/><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6b7c93"/></marker></defs><text x="60" y="32" font-size="13" font-weight="700" fill="#44546a">SOURCE GROUPS</text><text x="430" y="32" font-size="13" font-weight="700" fill="#44546a">IDEATION ARMS (matched LLM, schema, budget)</text><text x="945" y="32" font-size="13" font-weight="700" fill="#44546a">EVALUATION</text><rect x="40" y="60" width="280" height="56" rx="9" fill="#f5f8fb" stroke="#b9c6d8" stroke-width="2"/><text x="54" y="88" font-size="16" font-weight="750" fill="#17202a">random10 ICLR</text><text x="54" y="110" font-size="12" fill="#44546a">20 groups, 10 papers each (200 total)</text><rect x="40" y="128" width="280" height="56" rx="9" fill="#f5f8fb" stroke="#b9c6d8" stroke-width="2"/><text x="54" y="156" font-size="16" font-weight="750" fill="#17202a">random20 ICLR</text><text x="54" y="178" font-size="12" fill="#44546a">10 groups, 20 papers each (200 total)</text><rect x="40" y="196" width="280" height="56" rx="9" fill="#f5f8fb" stroke="#b9c6d8" stroke-width="2"/><text x="54" y="224" font-size="16" font-weight="750" fill="#17202a">Nature+ICLR mixed</text><text x="54" y="246" font-size="12" fill="#44546a">9 groups, 10 ICLR + 5 Nature (135)</text><rect x="40" y="286" width="280" height="56" rx="9" fill="#eef2f7" stroke="#7f8c8d" stroke-width="2"/><text x="54" y="314" font-size="16" font-weight="750" fill="#17202a">ICLR 2026 oral anchor</text><text x="54" y="336" font-size="12" fill="#44546a">100 ideas, used only as Elo anchor</text><text x="40" y="372" font-size="12" font-weight="700" fill="#17202a">» published as a Hugging Face dataset</text><text x="40" y="390" font-size="11" fill="#44546a">39 groups in total, schema + protocol in the dataset card</text><rect x="360" y="50" width="480" height="300" rx="14" fill="none" stroke="#cad6e3" stroke-dasharray="6 4" stroke-width="1.5"/><text x="374" y="72" font-size="12" font-weight="700" fill="#44546a">SAME LLM, IdeaProposal schema, 50 tool calls, 70 requests</text><rect x="378" y="90" width="444" height="60" rx="9" fill="#ecf3ff" stroke="#2f80ed" stroke-width="2"/><text x="392" y="118" font-size="16" font-weight="750" fill="#17202a">Shuffled LLM-only baseline</text><text x="392" y="140" font-size="12" fill="#44546a">one-shot prompt; per-idea deterministic abstract shuffle</text><rect x="378" y="162" width="444" height="60" rx="9" fill="#eaf7ee" stroke="#27ae60" stroke-width="2"/><text x="392" y="190" font-size="16" font-weight="750" fill="#17202a">ReprNet agent (El Agente Creativo)</text><text x="392" y="212" font-size="12" fill="#44546a">agentic loop over a Repr/Transform network (read-only)</text><rect x="378" y="234" width="444" height="60" rx="9" fill="#fdf1e1" stroke="#e67e22" stroke-width="2"/><text x="392" y="262" font-size="16" font-weight="750" fill="#17202a">Abstracts agent (no graph)</text><text x="392" y="284" font-size="12" fill="#44546a">agentic loop over the flat abstract corpus</text><rect x="890" y="60" width="250" height="70" rx="9" fill="#f3f5f7" stroke="#7f8c8d" stroke-width="2"/><text x="904" y="88" font-size="16" font-weight="750" fill="#17202a">Calibrated Elo tournament</text><text x="904" y="110" font-size="12" fill="#44546a">Swiss N-way judge, ICLR 2026 anchor</text><rect x="890" y="144" width="250" height="70" rx="9" fill="#f3f5f7" stroke="#7f8c8d" stroke-width="2"/><text x="904" y="172" font-size="16" font-weight="750" fill="#17202a">Local diversity</text><text x="904" y="194" font-size="12" fill="#44546a">D = 10 - top-5% LLM similarity</text><rect x="890" y="228" width="250" height="70" rx="9" fill="#f3f5f7" stroke="#7f8c8d" stroke-width="2"/><text x="904" y="256" font-size="16" font-weight="750" fill="#17202a">Token observability</text><text x="904" y="278" font-size="12" fill="#44546a">per-call input/output/requests</text><rect x="890" y="312" width="250" height="38" rx="9" fill="#eef2f7" stroke="#7f8c8d" stroke-width="2"/><text x="904" y="340" font-size="16" font-weight="750" fill="#17202a">ICLR oral-vs-poster calibration</text><text x="904" y="362" font-size="12" fill="#44546a">66.0 / 35.1 Elo reference gaps</text><line x1="320" y1="88" x2="378" y2="88" stroke="#6b7c93" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="320" y1="156" x2="378" y2="156" stroke="#6b7c93" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="320" y1="224" x2="378" y2="224" stroke="#6b7c93" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="866" y1="76" x2="866" y2="306" stroke="#cad6e3" stroke-width="3"/><line x1="840" y1="120" x2="866" y2="120" stroke="#2f80ed" stroke-width="2.5"/><line x1="840" y1="192" x2="866" y2="192" stroke="#27ae60" stroke-width="2.5"/><line x1="840" y1="264" x2="866" y2="264" stroke="#e67e22" stroke-width="2.5"/><line x1="866" y1="95" x2="890" y2="95" stroke="#6b7c93" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="866" y1="179" x2="890" y2="179" stroke="#6b7c93" stroke-width="2.5" marker-end="url(#arrow)"/><line x1="866" y1="263" x2="890" y2="263" stroke="#6b7c93" stroke-width="2.5" marker-end="url(#arrow)"/><text x="40" y="446" font-size="13" font-weight="800" fill="#17202a">EXPERIMENTAL INVARIANTS</text><text x="40" y="470" font-size="12" font-weight="700" fill="#17202a">Matched source.</text><text x="174" y="470" font-size="12" fill="#44546a">all three arms ingest the same paper IDs per group; abstract order is controlled per idea.</text><text x="40" y="492" font-size="12" font-weight="700" fill="#17202a">Read-only graph.</text><text x="174" y="492" font-size="12" fill="#44546a">prior experiment graphs are duplicated into experiment-scoped namespaces and verified by SHA-256.</text><text x="40" y="514" font-size="12" font-weight="700" fill="#17202a">Common-scale Elo.</text><text x="174" y="514" font-size="12" fill="#44546a">for each benchmark, all arms enter one tournament so per-idea Elo values share a single scale.</text></svg>
+</div>
+</body>
+</html>

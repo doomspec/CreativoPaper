@@ -1,0 +1,174 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bradley and Terry(1952)]{bradley1952rank}
+Ralph~Allan Bradley and Milton~E. Terry.
+\newblock Rank analysis of incomplete block designs: I. the method of paired
+  comparisons.
+\newblock \emph{Biometrika}, 39\penalty0 (3/4):\penalty0 324--345, 1952.
+\newblock \doi{10.2307/2334029}.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan,
+  Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess,
+  Clark, Berner, McCandlish, Radford, Sutskever, and
+  Amodei]{brown2020languagemodelsfewshotlearners}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan,
+  Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda
+  Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan,
+  Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter,
+  Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray,
+  Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford,
+  Ilya Sutskever, and Dario Amodei.
+\newblock Language models are few-shot learners, 2020.
+\newblock URL \url{https://arxiv.org/abs/2005.14165}.
+
+\bibitem[Chiang et~al.(2024)Chiang, Zheng, Sheng, Angelopoulos, Li, Li, Zhang,
+  Zhu, Jordan, Gonzalez, and Stoica]{chiang2024chatbotarenaopenplatform}
+Wei-Lin Chiang, Lianmin Zheng, Ying Sheng, Anastasios~Nikolas Angelopoulos,
+  Tianle Li, Dacheng Li, Hao Zhang, Banghua Zhu, Michael Jordan, Joseph~E.
+  Gonzalez, and Ion Stoica.
+\newblock Chatbot arena: An open platform for evaluating llms by human
+  preference, 2024.
+\newblock URL \url{https://arxiv.org/abs/2403.04132}.
+
+\bibitem[Elo(1978)]{elo1978rating}
+Arpad~E. Elo.
+\newblock \emph{The Rating of Chessplayers, Past and Present}.
+\newblock Arco Publishing, 1978.
+
+\bibitem[Ghafarollahi and Buehler(2024)]{ghafarollahi2024sciagents}
+Alireza Ghafarollahi and Markus~J. Buehler.
+\newblock {SciAgents}: Automating scientific discovery through multi-agent
+  intelligent graph reasoning, 2024.
+\newblock URL \url{https://arxiv.org/abs/2409.05556}.
+
+\bibitem[Ghareeb et~al.(2025)Ghareeb, Chang, Mitchener, Yiu, Szostkiewicz,
+  Laurent, Razzak, White, Hinks, and Rodriques]{ghareeb2025robin}
+Ali~Essam Ghareeb, Benjamin Chang, Ludovico Mitchener, Angela Yiu, Caralyn~J.
+  Szostkiewicz, Jon~M. Laurent, Muhammed~T. Razzak, Andrew~D. White,
+  Michaela~M. Hinks, and Samuel~G. Rodriques.
+\newblock Robin: A multi-agent system for automating scientific discovery,
+  2025.
+\newblock URL \url{https://arxiv.org/abs/2505.13400}.
+
+\bibitem[Guo et~al.(2025)Guo, Shariatmadari, Xiong, Huang, Kim, Williams,
+  Bekiranov, and Zhang]{guo2025ideabench}
+Sikun Guo, Amir~Hassan Shariatmadari, Guangzhi Xiong, Albert Huang, Myles Kim,
+  Corey~M. Williams, Stefan Bekiranov, and Aidong Zhang.
+\newblock Ideabench: Benchmarking large language models for research idea
+  generation.
+\newblock In \emph{Proceedings of the 31st ACM SIGKDD Conference on Knowledge
+  Discovery and Data Mining V.2}, pages 5888--5899. Association for Computing
+  Machinery, 2025.
+\newblock \doi{10.1145/3711896.3737419}.
+\newblock URL \url{https://doi.org/10.1145/3711896.3737419}.
+
+\bibitem[Kargupta et~al.(2026)Kargupta, Mehri, Hakkani-Tur, and
+  Han]{kargupta2026ideacatalyst}
+Priyanka Kargupta, Shuhaib Mehri, Dilek Hakkani-Tur, and Jiawei Han.
+\newblock Sparking scientific creativity via llm-driven interdisciplinary
+  inspiration, 2026.
+\newblock URL \url{https://arxiv.org/abs/2603.12226}.
+
+\bibitem[Kumar et~al.(2025)Kumar, Ghosal, Goyal, and
+  Ekbal]{kumar2025largelanguagemodelsunlock}
+Sandeep Kumar, Tirthankar Ghosal, Vinayak Goyal, and Asif Ekbal.
+\newblock Can large language models unlock novel scientific research ideas?,
+  2025.
+\newblock URL \url{https://arxiv.org/abs/2409.06185}.
+
+\bibitem[Lu et~al.(2024)Lu, Lu, Lange, Foerster, Clune, and
+  Ha]{lu2024aiscientistfullyautomated}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and David
+  Ha.
+\newblock The ai scientist: Towards fully automated open-ended scientific
+  discovery, 2024.
+\newblock URL \url{https://arxiv.org/abs/2408.06292}.
+
+\bibitem[Moussa et~al.(2025)Moussa, Da~Silva, Adu-Ampratwum, East, Lu,
+  Puccetti, Xue, Sun, Majumder, and Kumar]{moussa2025scholareval}
+Hanane~Nour Moussa, Patrick~Queiroz Da~Silva, Daniel Adu-Ampratwum, Alyson
+  East, Zitong Lu, Nikki Puccetti, Mingyi Xue, Huan Sun, Bodhisattwa~Prasad
+  Majumder, and Sachin Kumar.
+\newblock {ScholarEval}: Research idea evaluation grounded in literature, 2025.
+\newblock URL \url{https://arxiv.org/abs/2510.16234}.
+
+\bibitem[Qiu et~al.(2025)Qiu, Zhang, Xu, Li, Song, Wang, and
+  Zhang]{qiu2025aiideabench}
+Yansheng Qiu, Haoquan Zhang, Zhaopan Xu, Ming Li, Diping Song, Zheng Wang, and
+  Kaipeng Zhang.
+\newblock Ai idea bench 2025: Ai research idea generation benchmark, 2025.
+\newblock URL \url{https://arxiv.org/abs/2504.14191}.
+
+\bibitem[Radensky et~al.(2024)Radensky, Shahid, Fok, Siangliulue, Hope, and
+  Weld]{radensky2024scideator}
+Marissa Radensky, Simra Shahid, Raymond Fok, Pao Siangliulue, Tom Hope, and
+  Daniel~S. Weld.
+\newblock {SciDeator}: Human-llm scientific idea generation grounded in
+  research-paper facet recombination, 2024.
+\newblock URL \url{https://arxiv.org/abs/2409.14634}.
+
+\bibitem[Si et~al.(2024)Si, Yang, and
+  Hashimoto]{si2024llmsgeneratenovelresearch}
+Chenglei Si, Diyi Yang, and Tatsunori Hashimoto.
+\newblock Can llms generate novel research ideas? a large-scale human study
+  with 100+ nlp researchers, 2024.
+\newblock URL \url{https://arxiv.org/abs/2409.04109}.
+
+\bibitem[Vaswani et~al.(2023)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani2023attentionneed}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need, 2023.
+\newblock URL \url{https://arxiv.org/abs/1706.03762}.
+
+\bibitem[Wang et~al.(2024)Wang, Downey, Ji, and Hope]{wang2024scimon}
+Qingyun Wang, Doug Downey, Heng Ji, and Tom Hope.
+\newblock {SciMON}: Scientific inspiration machines optimized for novelty.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 279--299, 2024.
+\newblock URL \url{https://aclanthology.org/2024.acl-long.18}.
+
+\bibitem[Xiong et~al.(2024)Xiong, Xie, Shariatmadari, Guo, Bekiranov, and
+  Zhang]{xiong2024kgcoi}
+Guangzhi Xiong, Eric Xie, Amir~Hassan Shariatmadari, Sikun Guo, Stefan
+  Bekiranov, and Aidong Zhang.
+\newblock Improving scientific hypothesis generation with knowledge grounded
+  large language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2411.02382}.
+
+\bibitem[Zhang et~al.(2026)Zhang, Tan, Huang, Shen, Ma, Ju, Zhang, Wang, Jing,
+  Deng, Sha, Hu, Tong, Jiang, Geng, Ying, Zhang, Yin, Xi, Dou, Gui, Zhang, and
+  Huang]{zhang2026opennovelty}
+Ming Zhang, Kexin Tan, Yueyuan Huang, Yujiong Shen, Chunchun Ma, Li~Ju, Xinran
+  Zhang, Yuhui Wang, Wenqing Jing, Jingyi Deng, Huayu Sha, Binze Hu, Jingqi
+  Tong, Changhao Jiang, Yage Geng, Yuankai Ying, Yue Zhang, Zhangyue Yin,
+  Zhiheng Xi, Shihan Dou, Tao Gui, Qi~Zhang, and Xuanjing Huang.
+\newblock {OpenNovelty}: An llm-powered agentic system for verifiable scholarly
+  novelty assessment, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.01576}.
+
+\bibitem[Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
+  Li, Xing, Zhang, Gonzalez, and
+  Stoica]{zheng2023judgingllmasajudgemtbenchchatbot}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao
+  Zhuang, Zi~Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, Hao Zhang, Joseph~E.
+  Gonzalez, and Ion Stoica.
+\newblock Judging llm-as-a-judge with mt-bench and chatbot arena, 2023.
+\newblock URL \url{https://arxiv.org/abs/2306.05685}.
+
+\bibitem[Zhu et~al.(2018)Zhu, Lu, Zheng, Guo, Zhang, Wang, and
+  Yu]{zhu2018texygen}
+Yaoming Zhu, Sidi Lu, Lei Zheng, Jiaxian Guo, Weinan Zhang, Jun Wang, and Yong
+  Yu.
+\newblock Texygen: A benchmarking platform for text generation models.
+\newblock In \emph{The 41st International ACM SIGIR Conference on Research and
+  Development in Information Retrieval}, pages 1097--1100, 2018.
+\newblock \doi{10.1145/3209978.3210080}.
+
+\end{thebibliography}

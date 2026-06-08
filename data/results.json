@@ -1,0 +1,3060 @@
+{
+  "_elo_files": {
+    "calibration_iclr2025": "/Users/zijizhang/PycharmProjects/ReprNet/iclr2025_oral_vs_poster/elo_oral_vs_poster.jsonl",
+    "calibration_iclr2026": "/Users/zijizhang/PycharmProjects/ReprNet/iclr2026_oral_vs_poster/elo_oral_vs_poster.jsonl",
+    "random10": "/Users/zijizhang/PycharmProjects/ReprNet/experiments/2026-05-22_flatagent_random10/outputs/random10_four_way_elo.jsonl",
+    "random20": "/Users/zijizhang/PycharmProjects/ReprNet/experiments/2026-05-13_flatagent_baseline_random20/outputs/random20_three_way_elo.jsonl",
+    "interdisciplinary": "/Users/zijizhang/PycharmProjects/ReprNet/experiments/2026-05-22_flatagent_nature_mixed/outputs/mixed_three_way_elo.jsonl"
+  },
+  "calibration": {
+    "iclr2025": {
+      "elo_summary": {
+        "_summary": true,
+        "config": {
+          "paths": [
+            "iclr2025_oral_random100_ideas.jsonl",
+            "iclr2025_posters_random100_ideas.jsonl"
+          ],
+          "n_ideas": 200,
+          "max_matches": 1000,
+          "n_per_match": 4,
+          "k_factor": 32.0,
+          "tolerance": 120.0,
+          "min_exposures": 3,
+          "snapshot_every": 50,
+          "stability_epsilon": 6.0,
+          "patience": 3,
+          "concurrency": 8,
+          "seed": 42
+        },
+        "matches_played": 1000,
+        "n_ideas": 200,
+        "snapshots": [
+          {
+            "matches": 104,
+            "max_delta": 47.92281584059788,
+            "rms_delta": 12.605970399571362
+          },
+          {
+            "matches": 152,
+            "max_delta": 51.70885765232367,
+            "rms_delta": 12.732626043881565
+          },
+          {
+            "matches": 200,
+            "max_delta": 71.08783203059875,
+            "rms_delta": 11.827727557533034
+          },
+          {
+            "matches": 256,
+            "max_delta": 45.509842134096516,
+            "rms_delta": 13.718382122678756
+          },
+          {
+            "matches": 304,
+            "max_delta": 46.23526485711341,
+            "rms_delta": 11.476601350984552
+          },
+          {
+            "matches": 352,
+            "max_delta": 39.44026996744674,
+            "rms_delta": 11.307192182900916
+          },
+          {
+            "matches": 400,
+            "max_delta": 41.02758447413703,
+            "rms_delta": 11.163965624760564
+          },
+          {
+            "matches": 456,
+            "max_delta": 38.90087542854212,
+            "rms_delta": 11.858486761128786
+          },
+          {
+            "matches": 504,
+            "max_delta": 41.5067146057786,
+            "rms_delta": 11.0902049735102
+          },
+          {
+            "matches": 552,
+            "max_delta": 45.03576338724997,
+            "rms_delta": 10.731895878891324
+          },
+          {
+            "matches": 600,
+            "max_delta": 36.75477605646995,
+            "rms_delta": 10.379023747238293
+          },
+          {
+            "matches": 656,
+            "max_delta": 32.66595025751576,
+            "rms_delta": 10.93047459617156
+          },
+          {
+            "matches": 704,
+            "max_delta": 27.896653375217056,
+            "rms_delta": 9.461288552613961
+          },
+          {
+            "matches": 752,
+            "max_delta": 44.09113396957673,
+            "rms_delta": 10.421710121565257
+          },
+          {
+            "matches": 800,
+            "max_delta": 33.381217463009534,
+            "rms_delta": 9.47897119999517
+          },
+          {
+            "matches": 856,
+            "max_delta": 40.11890056148661,
+            "rms_delta": 10.562709369994888
+          },
+          {
+            "matches": 904,
+            "max_delta": 31.234800304050395,
+            "rms_delta": 9.251171633930776
+          },
+          {
+            "matches": 952,
+            "max_delta": 28.704935986718283,
+            "rms_delta": 9.587909333312426
+          },
+          {
+            "matches": 1000,
+            "max_delta": 39.98338224373106,
+            "rms_delta": 10.312700606044082
+          }
+        ],
+        "per_source": {
+          "iclr2025_oral_random100_ideas": {
+            "n_ideas": 100,
+            "mean_elo": 1032.98,
+            "mean_matches": 19.8
+          },
+          "iclr2025_posters_random100_ideas": {
+            "n_ideas": 100,
+            "mean_elo": 967.02,
+            "mean_matches": 20.2
+          }
+        }
+      },
+      "elo_stats": {
+        "iclr2025_oral_random100_ideas": {
+          "n": 100,
+          "mean": 1032.98,
+          "ci95": [
+            1013.6,
+            1052.75
+          ]
+        },
+        "iclr2025_posters_random100_ideas": {
+          "n": 100,
+          "mean": 967.02,
+          "ci95": [
+            946.29,
+            988.68
+          ]
+        }
+      },
+      "oral_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 376,
+        "valid_pairs": 376,
+        "errors": 0,
+        "avg_claude_score": 2.2,
+        "avg_gpt_score": 2.73,
+        "avg_combined_score": 2.46,
+        "avg_embedding_similarity": 0.8137,
+        "diversity_score": 7.54
+      },
+      "poster_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 393,
+        "valid_pairs": 393,
+        "errors": 0,
+        "avg_claude_score": 2.04,
+        "avg_gpt_score": 2.54,
+        "avg_combined_score": 2.29,
+        "avg_embedding_similarity": 0.8189,
+        "diversity_score": 7.71
+      }
+    },
+    "iclr2026": {
+      "elo_summary": {
+        "_summary": true,
+        "config": {
+          "paths": [
+            "iclr2026_oral_vs_poster/iclr2026_oral_random100_ideas.jsonl",
+            "iclr2026_oral_vs_poster/iclr2026_poster_random100_ideas.jsonl"
+          ],
+          "n_ideas": 200,
+          "max_matches": 1000,
+          "n_per_match": 4,
+          "k_factor": 32.0,
+          "tolerance": 120.0,
+          "min_exposures": 3,
+          "snapshot_every": 50,
+          "stability_epsilon": 6.0,
+          "patience": 3,
+          "concurrency": 8,
+          "seed": null
+        },
+        "matches_played": 1000,
+        "n_ideas": 200,
+        "snapshots": [
+          {
+            "matches": 104,
+            "max_delta": 41.29492731558594,
+            "rms_delta": 13.22034671986859
+          },
+          {
+            "matches": 152,
+            "max_delta": 53.24375880377056,
+            "rms_delta": 12.8122587567031
+          },
+          {
+            "matches": 200,
+            "max_delta": 91.2297717883007,
+            "rms_delta": 13.38010073842758
+          },
+          {
+            "matches": 256,
+            "max_delta": 33.32469585446154,
+            "rms_delta": 12.185961225695586
+          },
+          {
+            "matches": 304,
+            "max_delta": 48.28430511713623,
+            "rms_delta": 11.881541093881875
+          },
+          {
+            "matches": 352,
+            "max_delta": 41.77174189166283,
+            "rms_delta": 11.001643217083183
+          },
+          {
+            "matches": 400,
+            "max_delta": 41.43206939382492,
+            "rms_delta": 10.73930998653935
+          },
+          {
+            "matches": 456,
+            "max_delta": 39.7014120316652,
+            "rms_delta": 10.817518746424232
+          },
+          {
+            "matches": 504,
+            "max_delta": 39.119708615765376,
+            "rms_delta": 10.124730209876452
+          },
+          {
+            "matches": 552,
+            "max_delta": 48.12406265040454,
+            "rms_delta": 10.801384077685706
+          },
+          {
+            "matches": 600,
+            "max_delta": 31.371035853733815,
+            "rms_delta": 10.516835132037158
+          },
+          {
+            "matches": 656,
+            "max_delta": 53.123880351245134,
+            "rms_delta": 11.538339171532773
+          },
+          {
+            "matches": 704,
+            "max_delta": 45.74925778225759,
+            "rms_delta": 10.571256549939152
+          },
+          {
+            "matches": 752,
+            "max_delta": 35.233644490002575,
+            "rms_delta": 10.9732840037215
+          },
+          {
+            "matches": 800,
+            "max_delta": 39.96238724460045,
+            "rms_delta": 9.560939441854325
+          },
+          {
+            "matches": 856,
+            "max_delta": 41.4471446211644,
+            "rms_delta": 10.883970006892683
+          },
+          {
+            "matches": 904,
+            "max_delta": 44.495078530151886,
+            "rms_delta": 9.454796767519174
+          },
+          {
+            "matches": 952,
+            "max_delta": 35.2979225691538,
+            "rms_delta": 9.363925818056986
+          },
+          {
+            "matches": 1000,
+            "max_delta": 35.63449217085531,
+            "rms_delta": 9.208643737615885
+          }
+        ],
+        "per_source": {
+          "iclr2026_oral_random100_ideas": {
+            "n_ideas": 100,
+            "mean_elo": 1017.55,
+            "mean_matches": 20.26
+          },
+          "iclr2026_poster_random100_ideas": {
+            "n_ideas": 100,
+            "mean_elo": 982.45,
+            "mean_matches": 19.74
+          }
+        }
+      },
+      "elo_stats": {
+        "iclr2026_oral_random100_ideas": {
+          "n": 100,
+          "mean": 1017.55,
+          "ci95": [
+            994.38,
+            1041.31
+          ]
+        },
+        "iclr2026_poster_random100_ideas": {
+          "n": 100,
+          "mean": 982.45,
+          "ci95": [
+            963.77,
+            1001.12
+          ]
+        }
+      },
+      "oral_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 370,
+        "valid_pairs": 370,
+        "errors": 0,
+        "avg_claude_score": 2.16,
+        "avg_gpt_score": 2.65,
+        "avg_combined_score": 2.41,
+        "avg_embedding_similarity": 0.8125,
+        "diversity_score": 7.59
+      },
+      "poster_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 382,
+        "valid_pairs": 382,
+        "errors": 0,
+        "avg_claude_score": 2.12,
+        "avg_gpt_score": 2.62,
+        "avg_combined_score": 2.37,
+        "avg_embedding_similarity": 0.8157,
+        "diversity_score": 7.63
+      }
+    }
+  },
+  "random_v2": {
+    "random10": {
+      "elo_summary": {
+        "_summary": true,
+        "config": {
+          "paths": [
+            "/home/zijizhang/Desktop/reprnet/iclr2026_oral_vs_poster/iclr2026_oral_random100_ideas.jsonl",
+            "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_iclr2025_random_fair_benchmark_v2/outputs/random10_group_prompt_all.jsonl",
+            "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_iclr2025_random_fair_benchmark_v2/outputs/random10_group_graph_all.jsonl"
+          ],
+          "n_ideas": 500,
+          "max_matches": 2400,
+          "n_per_match": 4,
+          "k_factor": 32.0,
+          "tolerance": 120.0,
+          "min_exposures": 3,
+          "snapshot_every": 50,
+          "stability_epsilon": 6.0,
+          "patience": 3,
+          "concurrency": 12,
+          "seed": 20260511
+        },
+        "matches_played": 2400,
+        "n_ideas": 500,
+        "snapshots": [
+          {
+            "matches": 108,
+            "max_delta": 34.2179645526528,
+            "rms_delta": 7.660264812789791
+          },
+          {
+            "matches": 156,
+            "max_delta": 30.831816032392226,
+            "rms_delta": 7.362096195337643
+          },
+          {
+            "matches": 204,
+            "max_delta": 31.012681222580795,
+            "rms_delta": 7.511797352943978
+          },
+          {
+            "matches": 252,
+            "max_delta": 34.19622277935298,
+            "rms_delta": 7.481881802412995
+          },
+          {
+            "matches": 300,
+            "max_delta": 81.47672997371728,
+            "rms_delta": 7.986082923903731
+          },
+          {
+            "matches": 360,
+            "max_delta": 39.7520230198777,
+            "rms_delta": 8.361035518185172
+          },
+          {
+            "matches": 408,
+            "max_delta": 32.13509696382107,
+            "rms_delta": 7.496506332263012
+          },
+          {
+            "matches": 456,
+            "max_delta": 41.142550675915345,
+            "rms_delta": 7.17258716562872
+          },
+          {
+            "matches": 504,
+            "max_delta": 37.455356733390545,
+            "rms_delta": 7.042944842594595
+          },
+          {
+            "matches": 552,
+            "max_delta": 67.14915983251535,
+            "rms_delta": 7.344260071598976
+          },
+          {
+            "matches": 600,
+            "max_delta": 56.98059761751699,
+            "rms_delta": 7.09907834232461
+          },
+          {
+            "matches": 660,
+            "max_delta": 31.839182972654726,
+            "rms_delta": 7.369606573079829
+          },
+          {
+            "matches": 708,
+            "max_delta": 38.103857236785416,
+            "rms_delta": 6.977956554558549
+          },
+          {
+            "matches": 756,
+            "max_delta": 33.22003730034612,
+            "rms_delta": 6.73285947922115
+          },
+          {
+            "matches": 804,
+            "max_delta": 28.9267050693868,
+            "rms_delta": 6.428481714422156
+          },
+          {
+            "matches": 852,
+            "max_delta": 25.87644007853953,
+            "rms_delta": 6.60280871424388
+          },
+          {
+            "matches": 900,
+            "max_delta": 39.396313803667454,
+            "rms_delta": 6.691592389268629
+          },
+          {
+            "matches": 960,
+            "max_delta": 45.54456196312469,
+            "rms_delta": 7.789999516772392
+          },
+          {
+            "matches": 1008,
+            "max_delta": 29.641356780512524,
+            "rms_delta": 6.2937794791224615
+          },
+          {
+            "matches": 1056,
+            "max_delta": 35.90355541419012,
+            "rms_delta": 6.490141277366585
+          },
+          {
+            "matches": 1104,
+            "max_delta": 26.7854569906317,
+            "rms_delta": 6.529902927731538
+          },
+          {
+            "matches": 1152,
+            "max_delta": 35.9418192355688,
+            "rms_delta": 6.4886935582160685
+          },
+          {
+            "matches": 1200,
+            "max_delta": 26.890052820021083,
+            "rms_delta": 6.278421410570615
+          },
+          {
+            "matches": 1260,
+            "max_delta": 30.176173115542724,
+            "rms_delta": 7.063784364976041
+          },
+          {
+            "matches": 1308,
+            "max_delta": 27.495536530214736,
+            "rms_delta": 6.230582747701021
+          },
+          {
+            "matches": 1356,
+            "max_delta": 29.93792692941588,
+            "rms_delta": 6.114131979610165
+          },
+          {
+            "matches": 1404,
+            "max_delta": 28.802626121591743,
+            "rms_delta": 6.202461496068103
+          },
+          {
+            "matches": 1452,
+            "max_delta": 29.291334692708006,
+            "rms_delta": 6.118073865774364
+          },
+          {
+            "matches": 1500,
+            "max_delta": 35.21765500486481,
+            "rms_delta": 6.368454189572092
+          },
+          {
+            "matches": 1560,
+            "max_delta": 31.791103073059617,
+            "rms_delta": 6.782231217512224
+          },
+          {
+            "matches": 1608,
+            "max_delta": 33.69607011181381,
+            "rms_delta": 6.541953601793225
+          },
+          {
+            "matches": 1656,
+            "max_delta": 27.790335532689824,
+            "rms_delta": 6.204991374578376
+          },
+          {
+            "matches": 1704,
+            "max_delta": 41.840792077703554,
+            "rms_delta": 6.584925647293782
+          },
+          {
+            "matches": 1752,
+            "max_delta": 30.161658315910245,
+            "rms_delta": 5.908531816767498
+          },
+          {
+            "matches": 1800,
+            "max_delta": 30.084939628576194,
+            "rms_delta": 6.216365544371894
+          },
+          {
+            "matches": 1860,
+            "max_delta": 35.2684553795408,
+            "rms_delta": 7.468040595898381
+          },
+          {
+            "matches": 1908,
+            "max_delta": 36.563563260128944,
+            "rms_delta": 6.044425474357023
+          },
+          {
+            "matches": 1956,
+            "max_delta": 26.09695964923924,
+            "rms_delta": 6.124434521497971
+          },
+          {
+            "matches": 2004,
+            "max_delta": 32.846778987032735,
+            "rms_delta": 6.468422581703895
+          },
+          {
+            "matches": 2052,
+            "max_delta": 34.31626373539257,
+            "rms_delta": 6.370112187560911
+          },
+          {
+            "matches": 2100,
+            "max_delta": 36.03347426936375,
+            "rms_delta": 6.508912036524013
+          },
+          {
+            "matches": 2160,
+            "max_delta": 25.778748743896358,
+            "rms_delta": 6.709166838303781
+          },
+          {
+            "matches": 2208,
+            "max_delta": 29.24294350370974,
+            "rms_delta": 6.403014799849528
+          },
+          {
+            "matches": 2256,
+            "max_delta": 26.724429623527044,
+            "rms_delta": 6.160038242959473
+          },
+          {
+            "matches": 2304,
+            "max_delta": 31.863679210053306,
+            "rms_delta": 6.09984841983322
+          },
+          {
+            "matches": 2352,
+            "max_delta": 24.628105033242377,
+            "rms_delta": 6.111585019905335
+          },
+          {
+            "matches": 2400,
+            "max_delta": 31.93712968522516,
+            "rms_delta": 6.242335134252894
+          }
+        ],
+        "per_source": {
+          "iclr2026_oral_random100_ideas": {
+            "n_ideas": 100,
+            "mean_elo": 1021.38,
+            "mean_matches": 18.96
+          },
+          "random10_group_prompt_all": {
+            "n_ideas": 200,
+            "mean_elo": 938.79,
+            "mean_matches": 19.08
+          },
+          "random10_group_graph_all": {
+            "n_ideas": 200,
+            "mean_elo": 1050.52,
+            "mean_matches": 19.44
+          }
+        },
+        "token_usage": {
+          "input_tokens": 4110297,
+          "output_tokens": 555052,
+          "total_tokens": 4665349,
+          "requests": 2400
+        }
+      },
+      "elo_stats": {
+        "iclr2026_oral_random100_ideas": {
+          "n": 100,
+          "mean": 1021.38,
+          "ci95": [
+            998.64,
+            1044.48
+          ]
+        },
+        "random10_group_prompt_all": {
+          "n": 200,
+          "mean": 938.79,
+          "ci95": [
+            927.96,
+            949.53
+          ]
+        },
+        "random10_group_graph_all": {
+          "n": 200,
+          "mean": 1050.52,
+          "ci95": [
+            1039.51,
+            1061.35
+          ]
+        }
+      },
+      "prompt_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 240,
+        "valid_pairs": 240,
+        "errors": 0,
+        "avg_claude_score": 5.72,
+        "avg_gpt_score": null,
+        "avg_combined_score": 5.72,
+        "avg_embedding_similarity": 0.8973,
+        "diversity_score": 4.28,
+        "token_usage": {
+          "embedding": {
+            "input_tokens": 62386,
+            "output_tokens": 0,
+            "total_tokens": 62386,
+            "requests": 4
+          },
+          "llm_judge": {
+            "input_tokens": 221533,
+            "output_tokens": 79594,
+            "total_tokens": 301127,
+            "requests": 240
+          },
+          "total": {
+            "input_tokens": 283919,
+            "output_tokens": 79594,
+            "total_tokens": 363513,
+            "requests": 244
+          }
+        }
+      },
+      "graph_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 240,
+        "valid_pairs": 240,
+        "errors": 0,
+        "avg_claude_score": 4.38,
+        "avg_gpt_score": null,
+        "avg_combined_score": 4.38,
+        "avg_embedding_similarity": 0.8857,
+        "diversity_score": 5.62,
+        "token_usage": {
+          "embedding": {
+            "input_tokens": 68939,
+            "output_tokens": 0,
+            "total_tokens": 68939,
+            "requests": 4
+          },
+          "llm_judge": {
+            "input_tokens": 237286,
+            "output_tokens": 78299,
+            "total_tokens": 315585,
+            "requests": 240
+          },
+          "total": {
+            "input_tokens": 306225,
+            "output_tokens": 78299,
+            "total_tokens": 384524,
+            "requests": 244
+          }
+        }
+      }
+    },
+    "random20": {
+      "elo_summary": {
+        "_summary": true,
+        "config": {
+          "paths": [
+            "/home/zijizhang/Desktop/reprnet/iclr2026_oral_vs_poster/iclr2026_oral_random100_ideas.jsonl",
+            "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_iclr2025_random_fair_benchmark_v2/outputs/random20_group_prompt_all.jsonl",
+            "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_iclr2025_random_fair_benchmark_v2/outputs/random20_group_graph_all.jsonl"
+          ],
+          "n_ideas": 300,
+          "max_matches": 1600,
+          "n_per_match": 4,
+          "k_factor": 32.0,
+          "tolerance": 120.0,
+          "min_exposures": 3,
+          "snapshot_every": 50,
+          "stability_epsilon": 6.0,
+          "patience": 3,
+          "concurrency": 12,
+          "seed": 20260511
+        },
+        "matches_played": 1600,
+        "n_ideas": 300,
+        "snapshots": [
+          {
+            "matches": 108,
+            "max_delta": 31.901662550939704,
+            "rms_delta": 10.065452929055326
+          },
+          {
+            "matches": 156,
+            "max_delta": 45.730137804114634,
+            "rms_delta": 10.688236825196197
+          },
+          {
+            "matches": 204,
+            "max_delta": 77.3270993518629,
+            "rms_delta": 10.39117394792613
+          },
+          {
+            "matches": 252,
+            "max_delta": 44.66507089821869,
+            "rms_delta": 9.963724932011507
+          },
+          {
+            "matches": 300,
+            "max_delta": 54.967990126866425,
+            "rms_delta": 9.9789953834872
+          },
+          {
+            "matches": 360,
+            "max_delta": 68.34464483713975,
+            "rms_delta": 11.72642464166468
+          },
+          {
+            "matches": 408,
+            "max_delta": 33.45462046401144,
+            "rms_delta": 8.546843378833245
+          },
+          {
+            "matches": 456,
+            "max_delta": 33.614570501614025,
+            "rms_delta": 8.977389195572679
+          },
+          {
+            "matches": 504,
+            "max_delta": 30.56549904460894,
+            "rms_delta": 8.786956951599242
+          },
+          {
+            "matches": 552,
+            "max_delta": 29.87208285945951,
+            "rms_delta": 8.62374672680792
+          },
+          {
+            "matches": 600,
+            "max_delta": 34.52081264523804,
+            "rms_delta": 8.532514519256567
+          },
+          {
+            "matches": 660,
+            "max_delta": 42.06791616470957,
+            "rms_delta": 9.85349406332138
+          },
+          {
+            "matches": 708,
+            "max_delta": 30.00293661701835,
+            "rms_delta": 8.199361286077872
+          },
+          {
+            "matches": 756,
+            "max_delta": 29.771384515400428,
+            "rms_delta": 8.229811327811875
+          },
+          {
+            "matches": 804,
+            "max_delta": 31.405852190344604,
+            "rms_delta": 8.437387202412758
+          },
+          {
+            "matches": 852,
+            "max_delta": 28.552138243411832,
+            "rms_delta": 8.375102797902866
+          },
+          {
+            "matches": 900,
+            "max_delta": 35.19133490848026,
+            "rms_delta": 9.046062603770535
+          },
+          {
+            "matches": 960,
+            "max_delta": 50.162737693159784,
+            "rms_delta": 9.573207507971762
+          },
+          {
+            "matches": 1008,
+            "max_delta": 30.50139320812775,
+            "rms_delta": 8.175597041922167
+          },
+          {
+            "matches": 1056,
+            "max_delta": 26.78983457617528,
+            "rms_delta": 8.72578785615588
+          },
+          {
+            "matches": 1104,
+            "max_delta": 32.18142871007876,
+            "rms_delta": 8.415837934179839
+          },
+          {
+            "matches": 1152,
+            "max_delta": 36.5453090159499,
+            "rms_delta": 8.335017444384484
+          },
+          {
+            "matches": 1200,
+            "max_delta": 28.915547340221337,
+            "rms_delta": 8.19739304202937
+          },
+          {
+            "matches": 1260,
+            "max_delta": 31.188774469053328,
+            "rms_delta": 9.00916799233138
+          },
+          {
+            "matches": 1308,
+            "max_delta": 26.39971934027062,
+            "rms_delta": 7.860668404654506
+          },
+          {
+            "matches": 1356,
+            "max_delta": 32.66028155999004,
+            "rms_delta": 8.525905523142722
+          },
+          {
+            "matches": 1404,
+            "max_delta": 27.47558300904484,
+            "rms_delta": 7.997701294140196
+          },
+          {
+            "matches": 1452,
+            "max_delta": 33.21521784232539,
+            "rms_delta": 8.45332498382414
+          },
+          {
+            "matches": 1500,
+            "max_delta": 30.870484472689554,
+            "rms_delta": 8.065476240972066
+          },
+          {
+            "matches": 1560,
+            "max_delta": 41.204611119761466,
+            "rms_delta": 9.148414336476826
+          },
+          {
+            "matches": 1600,
+            "max_delta": 44.69428325718263,
+            "rms_delta": 8.039352553554796
+          }
+        ],
+        "per_source": {
+          "iclr2026_oral_random100_ideas": {
+            "n_ideas": 100,
+            "mean_elo": 1020.75,
+            "mean_matches": 21.46
+          },
+          "random20_group_prompt_all": {
+            "n_ideas": 100,
+            "mean_elo": 935.71,
+            "mean_matches": 21.03
+          },
+          "random20_group_graph_all": {
+            "n_ideas": 100,
+            "mean_elo": 1043.54,
+            "mean_matches": 21.51
+          }
+        },
+        "token_usage": {
+          "input_tokens": 2665323,
+          "output_tokens": 365898,
+          "total_tokens": 3031221,
+          "requests": 1600
+        }
+      },
+      "elo_stats": {
+        "iclr2026_oral_random100_ideas": {
+          "n": 100,
+          "mean": 1020.75,
+          "ci95": [
+            996.71,
+            1045.86
+          ]
+        },
+        "random20_group_prompt_all": {
+          "n": 100,
+          "mean": 935.71,
+          "ci95": [
+            919.02,
+            952.75
+          ]
+        },
+        "random20_group_graph_all": {
+          "n": 100,
+          "mean": 1043.54,
+          "ci95": [
+            1029.16,
+            1057.95
+          ]
+        }
+      },
+      "prompt_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 240,
+        "valid_pairs": 240,
+        "errors": 0,
+        "avg_claude_score": 3.69,
+        "avg_gpt_score": null,
+        "avg_combined_score": 3.69,
+        "avg_embedding_similarity": 0.8612,
+        "diversity_score": 6.31,
+        "token_usage": {
+          "embedding": {
+            "input_tokens": 31396,
+            "output_tokens": 0,
+            "total_tokens": 31396,
+            "requests": 2
+          },
+          "llm_judge": {
+            "input_tokens": 224953,
+            "output_tokens": 74110,
+            "total_tokens": 299063,
+            "requests": 240
+          },
+          "total": {
+            "input_tokens": 256349,
+            "output_tokens": 74110,
+            "total_tokens": 330459,
+            "requests": 242
+          }
+        }
+      },
+      "graph_diversity": {
+        "_summary": true,
+        "mode": "top_percentile_diversity",
+        "top_percent": 5.0,
+        "total_pairs": 240,
+        "valid_pairs": 240,
+        "errors": 0,
+        "avg_claude_score": 3.15,
+        "avg_gpt_score": null,
+        "avg_combined_score": 3.15,
+        "avg_embedding_similarity": 0.8596,
+        "diversity_score": 6.85,
+        "token_usage": {
+          "embedding": {
+            "input_tokens": 35418,
+            "output_tokens": 0,
+            "total_tokens": 35418,
+            "requests": 2
+          },
+          "llm_judge": {
+            "input_tokens": 242934,
+            "output_tokens": 74636,
+            "total_tokens": 317570,
+            "requests": 240
+          },
+          "total": {
+            "input_tokens": 278352,
+            "output_tokens": 74636,
+            "total_tokens": 352988,
+            "requests": 242
+          }
+        }
+      }
+    },
+    "token_summary": {
+      "generated_at": "2026-05-12T21:10:08.446863+00:00",
+      "experiment": "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_iclr2025_random_fair_benchmark_v2",
+      "note": "Exact token usage is available only for rows whose API response usage was logged. Older prompt, Elo, and diversity artifacts may show missing usage and should be rerun after the observability patch for paper-ready cost accounting.",
+      "by_group": {
+        "idea_entries": {
+          "files": 60,
+          "rows": 600,
+          "rows_with_usage": 600,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 94627209,
+            "output_tokens": 1097009,
+            "total_tokens": 95724218,
+            "requests": 7891
+          }
+        },
+        "elo_reports": {
+          "files": 2,
+          "rows": 802,
+          "rows_with_usage": 2,
+          "rows_missing_usage": 800,
+          "usage": {
+            "input_tokens": 6775620,
+            "output_tokens": 920950,
+            "total_tokens": 7696570,
+            "requests": 4000
+          }
+        },
+        "elo_matches": {
+          "files": 2,
+          "rows": 4000,
+          "rows_with_usage": 4000,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 6775620,
+            "output_tokens": 920950,
+            "total_tokens": 7696570,
+            "requests": 4000
+          }
+        },
+        "idea_aggregates_duplicate_rows": {
+          "files": 4,
+          "rows": 600,
+          "rows_with_usage": 600,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 94627209,
+            "output_tokens": 1097009,
+            "total_tokens": 95724218,
+            "requests": 7891
+          }
+        },
+        "diversity_reports": {
+          "files": 4,
+          "rows": 964,
+          "rows_with_usage": 964,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2051551,
+            "output_tokens": 613278,
+            "total_tokens": 2664829,
+            "requests": 1932
+          }
+        },
+        "graph_build": {
+          "files": 8,
+          "rows": 76,
+          "rows_with_usage": 76,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 5054790,
+            "output_tokens": 177293,
+            "total_tokens": 5232083,
+            "requests": 714
+          }
+        },
+        "api_usage_events": {
+          "files": 1,
+          "rows": 602,
+          "rows_with_usage": 602,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 94632477,
+            "output_tokens": 1097792,
+            "total_tokens": 95730269,
+            "requests": 7893
+          }
+        }
+      },
+      "files": [
+        {
+          "path": "outputs/graph_random10_group01_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2853513,
+            "output_tokens": 33129,
+            "total_tokens": 2886642,
+            "requests": 251
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group02_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2395495,
+            "output_tokens": 32502,
+            "total_tokens": 2427997,
+            "requests": 238
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group03_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2620608,
+            "output_tokens": 32855,
+            "total_tokens": 2653463,
+            "requests": 251
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group04_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2814467,
+            "output_tokens": 32067,
+            "total_tokens": 2846534,
+            "requests": 240
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group05_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2821584,
+            "output_tokens": 32613,
+            "total_tokens": 2854197,
+            "requests": 247
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group06_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3053707,
+            "output_tokens": 31635,
+            "total_tokens": 3085342,
+            "requests": 249
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group07_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2852831,
+            "output_tokens": 30352,
+            "total_tokens": 2883183,
+            "requests": 230
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group08_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2876960,
+            "output_tokens": 32671,
+            "total_tokens": 2909631,
+            "requests": 244
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group09_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2726278,
+            "output_tokens": 33338,
+            "total_tokens": 2759616,
+            "requests": 236
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group10_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2839792,
+            "output_tokens": 31850,
+            "total_tokens": 2871642,
+            "requests": 255
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group11_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3048538,
+            "output_tokens": 33487,
+            "total_tokens": 3082025,
+            "requests": 258
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group12_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2410869,
+            "output_tokens": 32756,
+            "total_tokens": 2443625,
+            "requests": 239
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group13_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3418039,
+            "output_tokens": 33574,
+            "total_tokens": 3451613,
+            "requests": 253
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group14_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2499752,
+            "output_tokens": 32124,
+            "total_tokens": 2531876,
+            "requests": 240
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group15_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2618255,
+            "output_tokens": 33166,
+            "total_tokens": 2651421,
+            "requests": 232
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group16_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2824307,
+            "output_tokens": 32604,
+            "total_tokens": 2856911,
+            "requests": 248
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group17_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3089016,
+            "output_tokens": 32984,
+            "total_tokens": 3122000,
+            "requests": 247
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group18_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3566333,
+            "output_tokens": 33252,
+            "total_tokens": 3599585,
+            "requests": 277
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group19_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2549560,
+            "output_tokens": 32228,
+            "total_tokens": 2581788,
+            "requests": 235
+          }
+        },
+        {
+          "path": "outputs/graph_random10_group20_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2018236,
+            "output_tokens": 32704,
+            "total_tokens": 2050940,
+            "requests": 216
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group01_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 4090484,
+            "output_tokens": 32074,
+            "total_tokens": 4122558,
+            "requests": 260
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group02_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 4665627,
+            "output_tokens": 33523,
+            "total_tokens": 4699150,
+            "requests": 294
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group03_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2858875,
+            "output_tokens": 32918,
+            "total_tokens": 2891793,
+            "requests": 255
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group04_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 4082151,
+            "output_tokens": 33479,
+            "total_tokens": 4115630,
+            "requests": 281
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group05_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3756930,
+            "output_tokens": 33474,
+            "total_tokens": 3790404,
+            "requests": 272
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group06_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3535602,
+            "output_tokens": 33524,
+            "total_tokens": 3569126,
+            "requests": 267
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group07_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3279401,
+            "output_tokens": 32810,
+            "total_tokens": 3312211,
+            "requests": 256
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group08_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3864203,
+            "output_tokens": 33376,
+            "total_tokens": 3897579,
+            "requests": 280
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group09_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 3226602,
+            "output_tokens": 33718,
+            "total_tokens": 3260320,
+            "requests": 250
+          }
+        },
+        {
+          "path": "outputs/graph_random20_group10_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 4351076,
+            "output_tokens": 33419,
+            "total_tokens": 4384495,
+            "requests": 290
+          }
+        },
+        {
+          "path": "outputs/random10_group01_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25163,
+            "output_tokens": 3613,
+            "total_tokens": 28776,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group02_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 24779,
+            "output_tokens": 3702,
+            "total_tokens": 28481,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group03_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 27830,
+            "output_tokens": 3834,
+            "total_tokens": 31664,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group04_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25658,
+            "output_tokens": 3747,
+            "total_tokens": 29405,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group05_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 26088,
+            "output_tokens": 3739,
+            "total_tokens": 29827,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group06_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25785,
+            "output_tokens": 3857,
+            "total_tokens": 29642,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group07_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 26034,
+            "output_tokens": 3823,
+            "total_tokens": 29857,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group08_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 27164,
+            "output_tokens": 3825,
+            "total_tokens": 30989,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group09_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25881,
+            "output_tokens": 3772,
+            "total_tokens": 29653,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group10_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25489,
+            "output_tokens": 3662,
+            "total_tokens": 29151,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group11_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25972,
+            "output_tokens": 3729,
+            "total_tokens": 29701,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group12_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25744,
+            "output_tokens": 3711,
+            "total_tokens": 29455,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group13_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 26718,
+            "output_tokens": 3671,
+            "total_tokens": 30389,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group14_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25499,
+            "output_tokens": 3742,
+            "total_tokens": 29241,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group15_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25975,
+            "output_tokens": 3632,
+            "total_tokens": 29607,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group16_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 26410,
+            "output_tokens": 3662,
+            "total_tokens": 30072,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group17_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 26605,
+            "output_tokens": 3853,
+            "total_tokens": 30458,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group18_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 26145,
+            "output_tokens": 3743,
+            "total_tokens": 29888,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group19_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25680,
+            "output_tokens": 3803,
+            "total_tokens": 29483,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group20_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 25260,
+            "output_tokens": 3741,
+            "total_tokens": 29001,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random10_group_elo_vs_iclr2026_oral100.jsonl",
+          "rows": 501,
+          "rows_with_usage": 1,
+          "rows_missing_usage": 500,
+          "usage": {
+            "input_tokens": 4110297,
+            "output_tokens": 555052,
+            "total_tokens": 4665349,
+            "requests": 2400
+          }
+        },
+        {
+          "path": "outputs/random10_group_elo_vs_iclr2026_oral100_matches.jsonl",
+          "rows": 2400,
+          "rows_with_usage": 2400,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 4110297,
+            "output_tokens": 555052,
+            "total_tokens": 4665349,
+            "requests": 2400
+          }
+        },
+        {
+          "path": "outputs/random10_group_graph_all.jsonl",
+          "rows": 200,
+          "rows_with_usage": 200,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 55898140,
+            "output_tokens": 651891,
+            "total_tokens": 56550031,
+            "requests": 4886
+          }
+        },
+        {
+          "path": "outputs/random10_group_prompt_all.jsonl",
+          "rows": 200,
+          "rows_with_usage": 200,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 519879,
+            "output_tokens": 74861,
+            "total_tokens": 594740,
+            "requests": 200
+          }
+        },
+        {
+          "path": "outputs/random20_group01_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 50142,
+            "output_tokens": 3792,
+            "total_tokens": 53934,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group02_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 49726,
+            "output_tokens": 3928,
+            "total_tokens": 53654,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group03_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 48268,
+            "output_tokens": 3678,
+            "total_tokens": 51946,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group04_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 50448,
+            "output_tokens": 3815,
+            "total_tokens": 54263,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group05_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 49104,
+            "output_tokens": 3845,
+            "total_tokens": 52949,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group06_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 50461,
+            "output_tokens": 3706,
+            "total_tokens": 54167,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group07_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 48654,
+            "output_tokens": 3716,
+            "total_tokens": 52370,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group08_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 50499,
+            "output_tokens": 3865,
+            "total_tokens": 54364,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group09_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 50192,
+            "output_tokens": 3828,
+            "total_tokens": 54020,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group10_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 50745,
+            "output_tokens": 3769,
+            "total_tokens": 54514,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/random20_group_elo_vs_iclr2026_oral100.jsonl",
+          "rows": 301,
+          "rows_with_usage": 1,
+          "rows_missing_usage": 300,
+          "usage": {
+            "input_tokens": 2665323,
+            "output_tokens": 365898,
+            "total_tokens": 3031221,
+            "requests": 1600
+          }
+        },
+        {
+          "path": "outputs/random20_group_elo_vs_iclr2026_oral100_matches.jsonl",
+          "rows": 1600,
+          "rows_with_usage": 1600,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 2665323,
+            "output_tokens": 365898,
+            "total_tokens": 3031221,
+            "requests": 1600
+          }
+        },
+        {
+          "path": "outputs/random20_group_graph_all.jsonl",
+          "rows": 100,
+          "rows_with_usage": 100,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 37710951,
+            "output_tokens": 332315,
+            "total_tokens": 38043266,
+            "requests": 2705
+          }
+        },
+        {
+          "path": "outputs/random20_group_prompt_all.jsonl",
+          "rows": 100,
+          "rows_with_usage": 100,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 498239,
+            "output_tokens": 37942,
+            "total_tokens": 536181,
+            "requests": 100
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_random10_group_graph_all_top240.jsonl",
+          "rows": 241,
+          "rows_with_usage": 241,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 543511,
+            "output_tokens": 156598,
+            "total_tokens": 700109,
+            "requests": 484
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_random10_group_prompt_all_top240.jsonl",
+          "rows": 241,
+          "rows_with_usage": 241,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 505452,
+            "output_tokens": 159188,
+            "total_tokens": 664640,
+            "requests": 484
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_random20_group_graph_all_top240.jsonl",
+          "rows": 241,
+          "rows_with_usage": 241,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 521286,
+            "output_tokens": 149272,
+            "total_tokens": 670558,
+            "requests": 482
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_random20_group_prompt_all_top240.jsonl",
+          "rows": 241,
+          "rows_with_usage": 241,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 481302,
+            "output_tokens": 148220,
+            "total_tokens": 629522,
+            "requests": 482
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group01.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 609163,
+            "output_tokens": 21927,
+            "total_tokens": 631090,
+            "requests": 90
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group02.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 708622,
+            "output_tokens": 23693,
+            "total_tokens": 732315,
+            "requests": 98
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group03.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 699184,
+            "output_tokens": 24096,
+            "total_tokens": 723280,
+            "requests": 97
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group04.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 654321,
+            "output_tokens": 23421,
+            "total_tokens": 677742,
+            "requests": 94
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group05.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 642184,
+            "output_tokens": 22139,
+            "total_tokens": 664323,
+            "requests": 92
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group06.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 707947,
+            "output_tokens": 24382,
+            "total_tokens": 732329,
+            "requests": 96
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group07.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 616331,
+            "output_tokens": 22438,
+            "total_tokens": 638769,
+            "requests": 88
+          }
+        },
+        {
+          "path": "logs/build_graph_random10_group08.jsonl",
+          "rows": 6,
+          "rows_with_usage": 6,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 417038,
+            "output_tokens": 15197,
+            "total_tokens": 432235,
+            "requests": 59
+          }
+        },
+        {
+          "path": "logs/token_usage.jsonl",
+          "rows": 602,
+          "rows_with_usage": 602,
+          "rows_missing_usage": 0,
+          "usage": {
+            "input_tokens": 94632477,
+            "output_tokens": 1097792,
+            "total_tokens": 95730269,
+            "requests": 7893
+          }
+        }
+      ]
+    }
+  },
+  "interdisciplinary": {
+    "elo_summary": {
+      "_summary": true,
+      "config": {
+        "paths": [
+          "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_interdisciplinary_nature_iclr_graph_effect/outputs/mixed_prompt_all.jsonl",
+          "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_interdisciplinary_nature_iclr_graph_effect/outputs/mixed_graph_augmented_all.jsonl"
+        ],
+        "n_ideas": 180,
+        "max_matches": 3600,
+        "n_per_match": 4,
+        "k_factor": 32.0,
+        "tolerance": 120.0,
+        "min_exposures": 3,
+        "snapshot_every": 50,
+        "stability_epsilon": 6.0,
+        "patience": 3,
+        "concurrency": 24,
+        "seed": 20260512
+      },
+      "matches_played": 3600,
+      "n_ideas": 180,
+      "snapshots": [
+        {
+          "matches": 120,
+          "max_delta": 41.5147644990534,
+          "rms_delta": 13.24484363913979
+        },
+        {
+          "matches": 168,
+          "max_delta": 138.67061522408983,
+          "rms_delta": 15.519456003578494
+        },
+        {
+          "matches": 216,
+          "max_delta": 37.69504630693814,
+          "rms_delta": 12.573468560676659
+        },
+        {
+          "matches": 264,
+          "max_delta": 89.99812100857957,
+          "rms_delta": 13.775681355031697
+        },
+        {
+          "matches": 312,
+          "max_delta": 48.239975921805126,
+          "rms_delta": 11.587152896357573
+        },
+        {
+          "matches": 360,
+          "max_delta": 40.69926405652291,
+          "rms_delta": 11.845968881405646
+        },
+        {
+          "matches": 408,
+          "max_delta": 35.80644255017182,
+          "rms_delta": 11.20742465898981
+        },
+        {
+          "matches": 456,
+          "max_delta": 34.37080419546771,
+          "rms_delta": 11.14645744676203
+        },
+        {
+          "matches": 504,
+          "max_delta": 46.323020713193046,
+          "rms_delta": 11.12614293519914
+        },
+        {
+          "matches": 552,
+          "max_delta": 34.88919943721771,
+          "rms_delta": 11.106490258888483
+        },
+        {
+          "matches": 600,
+          "max_delta": 44.43726348462792,
+          "rms_delta": 11.332965809509526
+        },
+        {
+          "matches": 672,
+          "max_delta": 44.96419726495424,
+          "rms_delta": 13.465053606279488
+        },
+        {
+          "matches": 720,
+          "max_delta": 37.930432698275695,
+          "rms_delta": 11.13706428665756
+        },
+        {
+          "matches": 768,
+          "max_delta": 34.274193514505214,
+          "rms_delta": 10.716051988461686
+        },
+        {
+          "matches": 816,
+          "max_delta": 39.965936010998576,
+          "rms_delta": 11.569548632133362
+        },
+        {
+          "matches": 864,
+          "max_delta": 29.764443567332137,
+          "rms_delta": 10.351765598893111
+        },
+        {
+          "matches": 912,
+          "max_delta": 32.218594708693104,
+          "rms_delta": 10.613725965934398
+        },
+        {
+          "matches": 960,
+          "max_delta": 33.97299038112578,
+          "rms_delta": 10.82617044774653
+        },
+        {
+          "matches": 1008,
+          "max_delta": 37.180196352692064,
+          "rms_delta": 10.559036287546904
+        },
+        {
+          "matches": 1056,
+          "max_delta": 33.35300656838285,
+          "rms_delta": 10.315815352007297
+        },
+        {
+          "matches": 1104,
+          "max_delta": 28.02546511079595,
+          "rms_delta": 9.7416990289373
+        },
+        {
+          "matches": 1152,
+          "max_delta": 38.38949329102911,
+          "rms_delta": 11.183961742510784
+        },
+        {
+          "matches": 1200,
+          "max_delta": 31.239582027604683,
+          "rms_delta": 10.307199647541733
+        },
+        {
+          "matches": 1272,
+          "max_delta": 33.003859396880216,
+          "rms_delta": 12.943710850574732
+        },
+        {
+          "matches": 1320,
+          "max_delta": 39.40670452569361,
+          "rms_delta": 10.550795248214124
+        },
+        {
+          "matches": 1368,
+          "max_delta": 33.76852620917168,
+          "rms_delta": 10.637387469579256
+        },
+        {
+          "matches": 1416,
+          "max_delta": 36.126862791243866,
+          "rms_delta": 9.86929743992975
+        },
+        {
+          "matches": 1464,
+          "max_delta": 38.75575979415544,
+          "rms_delta": 10.740213638545681
+        },
+        {
+          "matches": 1512,
+          "max_delta": 49.50047369283152,
+          "rms_delta": 10.670636067079785
+        },
+        {
+          "matches": 1560,
+          "max_delta": 38.46755215837402,
+          "rms_delta": 10.49078315898333
+        },
+        {
+          "matches": 1608,
+          "max_delta": 33.18624452661152,
+          "rms_delta": 9.79860118732863
+        },
+        {
+          "matches": 1656,
+          "max_delta": 38.679816262133954,
+          "rms_delta": 10.983993152319432
+        },
+        {
+          "matches": 1704,
+          "max_delta": 37.197475476149066,
+          "rms_delta": 10.272232491522082
+        },
+        {
+          "matches": 1752,
+          "max_delta": 33.73378512019531,
+          "rms_delta": 11.30753065632285
+        },
+        {
+          "matches": 1800,
+          "max_delta": 31.944564469356692,
+          "rms_delta": 9.96138468741282
+        },
+        {
+          "matches": 1872,
+          "max_delta": 50.861087533309046,
+          "rms_delta": 14.149307318046088
+        },
+        {
+          "matches": 1920,
+          "max_delta": 54.9498992022136,
+          "rms_delta": 11.26218579639372
+        },
+        {
+          "matches": 1968,
+          "max_delta": 34.155977071184566,
+          "rms_delta": 11.000889274723459
+        },
+        {
+          "matches": 2016,
+          "max_delta": 39.39275531799808,
+          "rms_delta": 11.281576309434152
+        },
+        {
+          "matches": 2064,
+          "max_delta": 29.932862781128165,
+          "rms_delta": 10.299827888771517
+        },
+        {
+          "matches": 2112,
+          "max_delta": 31.21863762804435,
+          "rms_delta": 10.079419523849673
+        },
+        {
+          "matches": 2160,
+          "max_delta": 40.64560799064634,
+          "rms_delta": 11.483177108110969
+        },
+        {
+          "matches": 2208,
+          "max_delta": 35.607611680302284,
+          "rms_delta": 10.46531892516412
+        },
+        {
+          "matches": 2256,
+          "max_delta": 33.78665005355265,
+          "rms_delta": 10.418408057246895
+        },
+        {
+          "matches": 2304,
+          "max_delta": 39.34240935121932,
+          "rms_delta": 11.273284192197808
+        },
+        {
+          "matches": 2352,
+          "max_delta": 37.64435690590199,
+          "rms_delta": 10.782572695837583
+        },
+        {
+          "matches": 2400,
+          "max_delta": 32.92666291219848,
+          "rms_delta": 10.71145415961056
+        },
+        {
+          "matches": 2472,
+          "max_delta": 40.26858015174071,
+          "rms_delta": 12.217570767692136
+        },
+        {
+          "matches": 2520,
+          "max_delta": 40.52835603859512,
+          "rms_delta": 12.076415695035182
+        },
+        {
+          "matches": 2568,
+          "max_delta": 34.424520467619004,
+          "rms_delta": 10.69750205214834
+        },
+        {
+          "matches": 2616,
+          "max_delta": 40.211014927584074,
+          "rms_delta": 10.589700137185947
+        },
+        {
+          "matches": 2664,
+          "max_delta": 42.905330971297644,
+          "rms_delta": 11.402555588612763
+        },
+        {
+          "matches": 2712,
+          "max_delta": 42.126187575965446,
+          "rms_delta": 11.423276240051711
+        },
+        {
+          "matches": 2760,
+          "max_delta": 51.57672357902436,
+          "rms_delta": 10.767144677470826
+        },
+        {
+          "matches": 2808,
+          "max_delta": 37.46669220093963,
+          "rms_delta": 10.276645367895668
+        },
+        {
+          "matches": 2856,
+          "max_delta": 42.61161761906942,
+          "rms_delta": 11.576657219391393
+        },
+        {
+          "matches": 2904,
+          "max_delta": 34.193942590600045,
+          "rms_delta": 10.619865453229334
+        },
+        {
+          "matches": 2952,
+          "max_delta": 34.797192824767194,
+          "rms_delta": 10.868357419798915
+        },
+        {
+          "matches": 3000,
+          "max_delta": 33.15374951378385,
+          "rms_delta": 10.245830124858308
+        },
+        {
+          "matches": 3072,
+          "max_delta": 52.42892131665826,
+          "rms_delta": 14.04528304689266
+        },
+        {
+          "matches": 3120,
+          "max_delta": 39.345418947465646,
+          "rms_delta": 10.83667874678384
+        },
+        {
+          "matches": 3168,
+          "max_delta": 41.89785467863828,
+          "rms_delta": 11.252754028007269
+        },
+        {
+          "matches": 3216,
+          "max_delta": 34.927769295637404,
+          "rms_delta": 11.411934783669674
+        },
+        {
+          "matches": 3264,
+          "max_delta": 50.618242676071986,
+          "rms_delta": 11.018419861850655
+        },
+        {
+          "matches": 3312,
+          "max_delta": 36.09392647350364,
+          "rms_delta": 11.133321551570798
+        },
+        {
+          "matches": 3360,
+          "max_delta": 44.78047713775504,
+          "rms_delta": 10.541246199674672
+        },
+        {
+          "matches": 3408,
+          "max_delta": 42.953832393509174,
+          "rms_delta": 11.62897132436268
+        },
+        {
+          "matches": 3456,
+          "max_delta": 41.448335155331506,
+          "rms_delta": 11.275137127013894
+        },
+        {
+          "matches": 3504,
+          "max_delta": 33.218943454154896,
+          "rms_delta": 9.802265602757409
+        },
+        {
+          "matches": 3552,
+          "max_delta": 32.50729235501069,
+          "rms_delta": 9.46481343180395
+        },
+        {
+          "matches": 3600,
+          "max_delta": 31.817952995281757,
+          "rms_delta": 9.650000181508872
+        }
+      ],
+      "per_source": {
+        "mixed_prompt_all": {
+          "n_ideas": 90,
+          "mean_elo": 924.51,
+          "mean_matches": 78.13
+        },
+        "mixed_graph_augmented_all": {
+          "n_ideas": 90,
+          "mean_elo": 1075.49,
+          "mean_matches": 78.89
+        }
+      },
+      "token_usage": {
+        "input_tokens": 6827023,
+        "output_tokens": 876690,
+        "total_tokens": 7703713,
+        "requests": 3533
+      }
+    },
+    "elo_stats": {
+      "mixed_prompt_all": {
+        "n": 90,
+        "mean": 924.51,
+        "ci95": [
+          892.47,
+          956.23
+        ]
+      },
+      "mixed_graph_augmented_all": {
+        "n": 90,
+        "mean": 1075.49,
+        "ci95": [
+          1039.7,
+          1110.81
+        ]
+      }
+    },
+    "prompt_diversity": {
+      "_summary": true,
+      "mode": "top_percentile_diversity",
+      "top_percent": 5.0,
+      "total_pairs": 295,
+      "valid_pairs": 289,
+      "errors": 6,
+      "avg_claude_score": 5.63,
+      "avg_gpt_score": null,
+      "avg_combined_score": 5.63,
+      "avg_embedding_similarity": 0.8927,
+      "diversity_score": 4.37,
+      "token_usage": {
+        "embedding": {
+          "input_tokens": 31056,
+          "output_tokens": 0,
+          "total_tokens": 31056,
+          "requests": 2
+        },
+        "llm_judge": {
+          "input_tokens": 289287,
+          "output_tokens": 100963,
+          "total_tokens": 390250,
+          "requests": 289
+        },
+        "total": {
+          "input_tokens": 320343,
+          "output_tokens": 100963,
+          "total_tokens": 421306,
+          "requests": 291
+        }
+      }
+    },
+    "graph_diversity": {
+      "_summary": true,
+      "mode": "top_percentile_diversity",
+      "top_percent": 5.0,
+      "total_pairs": 314,
+      "valid_pairs": 307,
+      "errors": 7,
+      "avg_claude_score": 3.62,
+      "avg_gpt_score": null,
+      "avg_combined_score": 3.62,
+      "avg_embedding_similarity": 0.8596,
+      "diversity_score": 6.38,
+      "token_usage": {
+        "embedding": {
+          "input_tokens": 34242,
+          "output_tokens": 0,
+          "total_tokens": 34242,
+          "requests": 2
+        },
+        "llm_judge": {
+          "input_tokens": 317476,
+          "output_tokens": 100645,
+          "total_tokens": 418121,
+          "requests": 307
+        },
+        "total": {
+          "input_tokens": 351718,
+          "output_tokens": 100645,
+          "total_tokens": 452363,
+          "requests": 309
+        }
+      }
+    },
+    "rubric": {
+      "_summary": true,
+      "rows": 180,
+      "by_arm": {
+        "prompt_mixed_shuffled": {
+          "domain_coverage": 4.878,
+          "integration_depth": 4.233,
+          "bidirectional_value": 3.933,
+          "source_grounding": 4.322,
+          "feasibility": 2.644
+        },
+        "graph_duplicate_iclr_plus_nature_augmented": {
+          "domain_coverage": 4.956,
+          "integration_depth": 4.411,
+          "bidirectional_value": 4.122,
+          "source_grounding": 4.089,
+          "feasibility": 2.733
+        }
+      },
+      "token_usage": {
+        "input_tokens": 118743,
+        "output_tokens": 62712,
+        "total_tokens": 181455,
+        "requests": 183
+      }
+    },
+    "token_summary": {
+      "generated_at": "2026-05-13T21:31:30.202752+00:00",
+      "experiment": "/home/zijizhang/Desktop/reprnet/experiments/2026-05-12_interdisciplinary_nature_iclr_graph_effect",
+      "by_group": {
+        "graph_augmentation_logs": {
+          "files": 9,
+          "rows": 45,
+          "usage": {
+            "input_tokens": 3064617,
+            "output_tokens": 109743,
+            "total_tokens": 3174360,
+            "requests": 407
+          }
+        },
+        "api_usage_events": {
+          "files": 1,
+          "rows": 286,
+          "usage": {
+            "input_tokens": 640614,
+            "output_tokens": 119600,
+            "total_tokens": 760214,
+            "requests": 286
+          }
+        },
+        "outputs": {
+          "files": 27,
+          "rows": 5017,
+          "usage": {
+            "input_tokens": 63918106,
+            "output_tokens": 2825848,
+            "total_tokens": 66743954,
+            "requests": 13072
+          }
+        }
+      },
+      "files": [
+        {
+          "path": "logs/augment_mixed_group01.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 257107,
+            "output_tokens": 11083,
+            "total_tokens": 268190,
+            "requests": 38
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group02.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 408127,
+            "output_tokens": 13065,
+            "total_tokens": 421192,
+            "requests": 52
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group03.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 364850,
+            "output_tokens": 12753,
+            "total_tokens": 377603,
+            "requests": 46
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group04.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 318313,
+            "output_tokens": 13071,
+            "total_tokens": 331384,
+            "requests": 41
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group05.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 361456,
+            "output_tokens": 12240,
+            "total_tokens": 373696,
+            "requests": 48
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group06.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 264078,
+            "output_tokens": 10520,
+            "total_tokens": 274598,
+            "requests": 39
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group07.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 363170,
+            "output_tokens": 12272,
+            "total_tokens": 375442,
+            "requests": 47
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group08.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 404824,
+            "output_tokens": 12978,
+            "total_tokens": 417802,
+            "requests": 51
+          }
+        },
+        {
+          "path": "logs/augment_mixed_group09.jsonl",
+          "rows": 5,
+          "rows_with_usage": 5,
+          "usage": {
+            "input_tokens": 322692,
+            "output_tokens": 11761,
+            "total_tokens": 334453,
+            "requests": 45
+          }
+        },
+        {
+          "path": "logs/token_usage.jsonl",
+          "rows": 286,
+          "rows_with_usage": 286,
+          "usage": {
+            "input_tokens": 640614,
+            "output_tokens": 119600,
+            "total_tokens": 760214,
+            "requests": 286
+          }
+        },
+        {
+          "path": "outputs/interdisciplinarity_rubric.jsonl",
+          "rows": 181,
+          "rows_with_usage": 181,
+          "usage": {
+            "input_tokens": 237486,
+            "output_tokens": 125424,
+            "total_tokens": 362910,
+            "requests": 366
+          }
+        },
+        {
+          "path": "outputs/mixed_elo_prompt_vs_graph.jsonl",
+          "rows": 181,
+          "rows_with_usage": 1,
+          "usage": {
+            "input_tokens": 6827023,
+            "output_tokens": 876690,
+            "total_tokens": 7703713,
+            "requests": 3533
+          }
+        },
+        {
+          "path": "outputs/mixed_elo_prompt_vs_graph_matches.jsonl",
+          "rows": 3600,
+          "rows_with_usage": 3533,
+          "usage": {
+            "input_tokens": 6827023,
+            "output_tokens": 876690,
+            "total_tokens": 7703713,
+            "requests": 3533
+          }
+        },
+        {
+          "path": "outputs/mixed_graph_augmented_all.jsonl",
+          "rows": 90,
+          "rows_with_usage": 90,
+          "usage": {
+            "input_tokens": 24155516,
+            "output_tokens": 303520,
+            "total_tokens": 24459036,
+            "requests": 2391
+          }
+        },
+        {
+          "path": "outputs/mixed_group01_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2498996,
+            "output_tokens": 32722,
+            "total_tokens": 2531718,
+            "requests": 257
+          }
+        },
+        {
+          "path": "outputs/mixed_group01_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 50290,
+            "output_tokens": 6018,
+            "total_tokens": 56308,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group02_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2714572,
+            "output_tokens": 33717,
+            "total_tokens": 2748289,
+            "requests": 262
+          }
+        },
+        {
+          "path": "outputs/mixed_group02_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 50400,
+            "output_tokens": 5851,
+            "total_tokens": 56251,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group03_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2836071,
+            "output_tokens": 34192,
+            "total_tokens": 2870263,
+            "requests": 270
+          }
+        },
+        {
+          "path": "outputs/mixed_group03_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 61295,
+            "output_tokens": 6014,
+            "total_tokens": 67309,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group04_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2601133,
+            "output_tokens": 33955,
+            "total_tokens": 2635088,
+            "requests": 260
+          }
+        },
+        {
+          "path": "outputs/mixed_group04_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 56690,
+            "output_tokens": 6370,
+            "total_tokens": 63060,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group05_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2600341,
+            "output_tokens": 33314,
+            "total_tokens": 2633655,
+            "requests": 275
+          }
+        },
+        {
+          "path": "outputs/mixed_group05_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 59260,
+            "output_tokens": 6279,
+            "total_tokens": 65539,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group06_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2988355,
+            "output_tokens": 34021,
+            "total_tokens": 3022376,
+            "requests": 268
+          }
+        },
+        {
+          "path": "outputs/mixed_group06_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 59331,
+            "output_tokens": 6088,
+            "total_tokens": 65419,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group07_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2588154,
+            "output_tokens": 33680,
+            "total_tokens": 2621834,
+            "requests": 261
+          }
+        },
+        {
+          "path": "outputs/mixed_group07_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 58802,
+            "output_tokens": 6245,
+            "total_tokens": 65047,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group08_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2758607,
+            "output_tokens": 34480,
+            "total_tokens": 2793087,
+            "requests": 271
+          }
+        },
+        {
+          "path": "outputs/mixed_group08_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 60422,
+            "output_tokens": 6195,
+            "total_tokens": 66617,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_group09_graph_augmented_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 2569287,
+            "output_tokens": 33439,
+            "total_tokens": 2602726,
+            "requests": 267
+          }
+        },
+        {
+          "path": "outputs/mixed_group09_prompt_ideas.jsonl",
+          "rows": 10,
+          "rows_with_usage": 10,
+          "usage": {
+            "input_tokens": 56859,
+            "output_tokens": 6047,
+            "total_tokens": 62906,
+            "requests": 10
+          }
+        },
+        {
+          "path": "outputs/mixed_prompt_all.jsonl",
+          "rows": 90,
+          "rows_with_usage": 90,
+          "usage": {
+            "input_tokens": 513349,
+            "output_tokens": 55107,
+            "total_tokens": 568456,
+            "requests": 90
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_mixed_graph_augmented_top120.jsonl",
+          "rows": 42,
+          "rows_with_usage": 41,
+          "usage": {
+            "input_tokens": 41850,
+            "output_tokens": 13831,
+            "total_tokens": 55681,
+            "requests": 41
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_mixed_graph_augmented_top360.jsonl",
+          "rows": 315,
+          "rows_with_usage": 307,
+          "usage": {
+            "input_tokens": 317476,
+            "output_tokens": 100645,
+            "total_tokens": 418121,
+            "requests": 307
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_mixed_prompt_top120.jsonl",
+          "rows": 42,
+          "rows_with_usage": 41,
+          "usage": {
+            "input_tokens": 40231,
+            "output_tokens": 14351,
+            "total_tokens": 54582,
+            "requests": 41
+          }
+        },
+        {
+          "path": "outputs/similarity_top5_mixed_prompt_top360.jsonl",
+          "rows": 296,
+          "rows_with_usage": 289,
+          "usage": {
+            "input_tokens": 289287,
+            "output_tokens": 100963,
+            "total_tokens": 390250,
+            "requests": 289
+          }
+        }
+      ]
+    }
+  }
+}
