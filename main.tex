@@ -46,11 +46,15 @@ shares its LLM, workflow, output schema, and tool-call budget but
 reasons over the flat abstract corpus.  Using an LLM-as-judge Elo
 protocol calibrated on ICLR oral-vs-poster gaps, we find that both
 agentic arms beat a deliberately strong shuffled LLM-only baseline by
-$57$--$123$ Elo and exceed an ICLR 2026 oral anchor, yet tie each
-other on quality---the headline gain is carried by the agentic loop,
+$57$--$123$ Elo and exceed an ICLR 2026 oral anchor, yet are
+statistically indistinguishable from each other on quality within
+tournament noise---the headline gain is carried by the agentic loop,
 not by graph structure per se.  Graph structure instead delivers a
 consistent nearest-neighbor diversity edge, largest cross-domain, at
-$1.29$--$1.79\times$ lower per-idea token cost.  Schema-isolating
+$1.29$--$1.79\times$ lower per-idea \emph{generation} token cost (a
+generation-time figure that excludes the graph's one-time
+construction, so the net cost advantage accrues only once that
+upfront build is amortized over enough ideas).  Schema-isolating
 ablations trace this edge to the typed Repr/Transform schema: ReprNet
 beats a matched generic knowledge-graph agent by $+28.76$ to $+39.34$
 Elo at matched cost, and removing the realization (is-a) hierarchy
@@ -182,13 +186,23 @@ tools---sampling random nodes, expanding parent and child hierarchies,
 finding paths between distant concepts---and returns a single paper-style
 idea per run.
 
-The LLM-only baseline preserves every degree of freedom except the
-representation.  It receives the same source papers as plain text under
-deterministically reshuffled abstract order, returns an idea under the
-identical JSON schema, and shares the underlying LLM and decoding settings
-with the ReprNet agent.  The only systematic difference between the two arms
-is whether the model interacts with the literature through a graph or
-through a flat list of abstracts.
+The LLM-only baseline matches the source papers, the deterministically
+reshuffled abstract order, the underlying LLM, and the decoding
+settings of the ReprNet agent, and returns an idea under the same
+JSON schema.  Two implementation details differ beyond the
+representation, however, and we disclose them so the LLM-only gap is
+not over-read: the baseline is a single chat completion with no
+tool-use loop and a fixed output-token cap, and it recovers the idea
+by parsing free-form text rather than through the agents'
+structured-output validator with retries.  The agentic-vs-LLM-only
+gap therefore conflates the agentic loop with output-format
+enforcement and the absence of an output cap.  For this reason we
+treat LLM-only as a deliberately strong \emph{lower bound} rather than
+a clean single-variable control, and rest the clean
+representation-only contrast on the ReprNet-vs-Abstracts comparison
+(\S\ref{sec:results}), where the framework, schema, output handling,
+and budgets are matched and the substrate is the sole systematic
+difference.
 
 A central design invariant is that prior experiment graphs are treated
 as read-only artifacts so that quality gains cannot be confounded by
@@ -238,8 +252,9 @@ fingerprint-verified read-only duplicate
 \paragraph{Abstracts agent (non-graph agentic baseline).}
 To distinguish the contribution of explicit graph structure from that
 of the agentic loop, every benchmark in this paper also includes a
-third arm called \textbf{Abstracts agent}.  Abstracts agent shares every degree of
-freedom with the ReprNet agent (same LLM, same Pydantic AI framework, same
+third arm called \textbf{Abstracts agent}.  Abstracts agent matches the
+ReprNet agent on the confounding degrees of freedom (same LLM, same
+Pydantic AI framework, same
 \texttt{IdeaProposal} schema, same source IDs, same 50 tool-call and
 70 request budget, same workflow of sample $\to$ inspect $\to$ explore
 neighbors $\to$ bridge $\to$ synthesize $\to$ self-critique) but its
@@ -247,7 +262,12 @@ tool palette (\texttt{random\_paper}, \texttt{read\_paper},
 \texttt{search\_papers}, \texttt{find\_related}, \texttt{bridge}) acts
 on the flat abstract corpus rather than on the representation graph,
 using sentence-embedding cosine similarity in place of typed-edge
-traversal.  Abstracts agent generates 10 ideas per group at each
+traversal.  The palettes are matched in workflow role rather than in
+exact tool count---the ReprNet read-only palette is somewhat larger
+(it adds hierarchy- and path-navigation tools that presuppose the
+graph substrate; Appendix~\ref{app:method-details})---so the contrast
+isolates the substrate while, if anything, granting the graph arm a
+few extra affordances.  Abstracts agent generates 10 ideas per group at each
 benchmark---200 at random10, 100 at random20, 90 at Nature+ICLR
 mixed---and enters the tournament for each setting alongside the
 LLM-only, ReprNet-agent, and (where applicable) ICLR 2026 oral anchor pools.
@@ -565,6 +585,18 @@ under matched-quality comparison is not better mean Elo but
 (i) better local diversity, and (ii) the ability to deliberate over a
 compact symbolic substrate rather than re-reading raw abstracts every
 time the agent wants to look something up.
+
+This per-idea comparison is a \emph{generation-time} accounting and
+deliberately excludes the ReprNet graph's one-time, per-group
+construction, which is itself a substantial multi-turn LLM cost
+(reported separately in Table~\ref{tab:stepcost}); the Abstracts
+agent's only comparable preprocessing is lightweight sentence
+embeddings.  The headline ``$1.29$--$1.79\times$ cheaper'' claim should
+therefore be read at the per-idea generation margin, not as a
+total-cost-of-ownership statement: the upfront graph build dominates
+for small idea pools, and the net advantage materializes only once a
+group's graph is amortized over enough generated ideas.  Quantifying
+that break-even point per setting is left to future work.
 
 This cost structure positions two follow-on directions.  First,
 traversal-context compression for the ReprNet agent---cached subgraph
@@ -888,12 +920,16 @@ anchor on both within-domain random tournaments.  Comparing the ReprNet
 agent against a matched non-graph agentic baseline (Abstracts agent) at every
 setting splits this gain cleanly: the agentic loop carries
 \emph{essentially all} of the quality lift over LLM-only (the ReprNet and
-Abstracts agents are statistically tied at random10, random20, and mixed),
+Abstracts agents are statistically indistinguishable, within
+tournament noise, at random10, random20, and mixed---an absence of a
+detectable gap rather than proven equivalence),
 while explicit graph structure delivers two distinct, complementary
 wins on top---a consistent nearest-neighbor diversity edge of $+0.27$
 to $+1.29$ over Abstracts agent (largest cross-domain), and a
-$1.29$--$1.79\times$ lower per-idea token cost at matched quality
-(also largest cross-domain).  We therefore view agentic ideation as
+$1.29$--$1.79\times$ lower per-idea \emph{generation} token cost at
+matched quality (also largest cross-domain; this margin excludes the
+graph's one-time construction, against which the Abstracts agent's
+embedding overhead is negligible).  We therefore view agentic ideation as
 the right substrate for LLM-based scientific discovery and explicit
 graph structure over the literature as a consistent diversity-and-cost
 win on top of it, most impactful in cross-domain settings.
@@ -1114,9 +1150,20 @@ read-only counterpart of the builder palette:
 neighbours, source papers),
 \texttt{search\_entities(query, top\_k)},
 \texttt{get\_neighbors(name)}, and
-\texttt{find\_paths(src, dst)}.  Each of these has a one-to-one
-ReprNet counterpart, so the agent's reasoning loop is structurally
-identical; only the graph it queries differs.  For the mixed
+\texttt{find\_paths(src, dst)}.  Each of these maps onto a ReprNet
+read-only tool with matched semantics, so the agent's reasoning loop
+has the same shape on both substrates.  The mapping is not strictly
+one-to-one in cardinality, however: the ReprNet read-only palette is
+somewhat richer (around ten tools), exposing separate parent/child
+hierarchy navigation (\texttt{get\_parents}/\texttt{get\_children}),
+component and wide-node analysis, and a second path tool
+(\texttt{find\_shortest\_path}) in addition to the five above.  Most
+of these extra affordances exist precisely because the typed schema
+supports them---hierarchy navigation requires the realization edges
+that the generic KG lacks---so they are best read as part of the
+substrate under test rather than a neutral tooling advantage; we
+nonetheless flag that the ReprNet arm exposes more tools, so we cannot
+fully exclude a tool-count contribution to its edge.  For the mixed
 benchmark the methodology prompt is the interdisciplinary variant
 (must use one ML and one Nature-domain concept; explain how the
 scientific mechanism shapes the ML representation), again
@@ -1149,7 +1196,7 @@ Generator LLM (builder + ideator)                  & Claude Sonnet 4.6 (Bedrock)
 Pydantic AI framework + output schema              & \texttt{IdeaProposal}         & same                         \\
 Ideation tool budget                               & $50$ tool calls, $70$ req     & same constants               \\
 Ideation workflow shape                            & random$\to$inspect$\to$explore$\to$bridge$\to$synth$\to$critique & identical \\
-Ideation tool palette (read-only)                  & random / get / search / neighbours / paths & one-to-one counterparts \\
+Ideation tool palette (read-only)                  & random / get / search / neighbours / paths ($+$ hierarchy/analysis tools) & matched core; ReprNet richer \\
 Per-paper KG-build LLM + driver                    & Pydantic AI multi-turn        & same                         \\
 Per-paper KG-build request budget                  & $16$ requests                 & same ($\texttt{request\_limit=16}$) \\
 Builder tool palette                               & search / find / get / add (typed) & search / find / get / add (untyped) \\
@@ -1180,9 +1227,18 @@ stronger model).  Matching the Pydantic AI framework and
 budget rules out ``more tool calls $\to$ better ideas''.  Matching
 the workflow shape rules out prompt-engineering luck --- the same
 inspect/explore/bridge/synthesize/critique scaffold is on both
-sides.  Matching the tool palette one-to-one rules out
-``ReprNet just exposes more affordances'': it does not; both
-agents see five tools each, with matched semantics.  Matching the
+sides.  Matching the core tool semantics limits the
+``ReprNet just exposes more affordances'' confound, though it does not
+eliminate it: both agents share the same five-verb reasoning loop
+(random/get/search/neighbours/paths) with matched semantics, but the
+ReprNet read-only palette is somewhat larger (around ten tools, adding
+explicit parent/child hierarchy navigation, component/wide-node
+analysis, and a shortest-path tool).  Those extra tools are
+schema-specific---they operate on the realization hierarchy and typed
+structure that the generic KG does not have---so they are part of the
+substrate under test; still, we do not claim strict numeric tool
+parity, and a residual affordance advantage for ReprNet cannot be
+ruled out.  Matching the
 construction loop (multi-turn agent with $\texttt{request\_limit=16}$
 and search-first instructions) rules out the construction-quality
 confound that motivated this ablation in the first place ---
