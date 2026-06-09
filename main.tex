@@ -37,6 +37,8 @@
 \maketitle
 
 \begin{abstract}
+% TODO: the abstract is not following the background, open questions, questoin address and result/significance structure. think hard what these things should be.
+% TODO: remove the elo score numbers bc they confuse the reader
 We disentangle the contributions of explicit literature structure
 from those of the agentic loop in LLM research ideation.  \textbf{El
 Agente Creativo} composes ideas by traversing a representation network
@@ -64,12 +66,12 @@ bridge unfamiliar domains.
 \end{abstract}
 
 \section{Introduction}
-
+% TODO: rewrite the background into this flow: LLM is good. LLM is applied to scientific procedures. However, to achieve end-to-end we need idea generator that starts the research. 
 Large language models (LLMs) are increasingly capable partners in the
 scientific workflow, generating idea-like abstracts that read fluently and
 recover surface markers of novelty
 \citep{si2024llmsgeneratenovelresearch,kumar2025largelanguagemodelsunlock,lu2024aiscientistfullyautomated,vaswani2023attentionneed,brown2020languagemodelsfewshotlearners}.
-This progress, however, has been measured almost entirely by whether the
+This progress, however, has been measured almost by whether the
 output looks plausible, leaving open the question that matters for the
 design of practical scientific assistants: given a fixed set of source
 papers, does providing the LLM with a structured representation of the
@@ -86,8 +88,8 @@ identities, controlled abstract order, and a quality judge whose scale is
 itself externally validated---three constraints that have not been combined
 in prior ideation benchmarks.
 
-We address this gap with \textbf{El Agente Creativo}, a graph-conditioned
-ideation agent that operates over a representation network in which each
+We propose \textbf{El Agente Creativo}, a 
+ideation agent that operates over a type of knowledge graph which we call \textbf{representation network} in which each
 source paper is distilled into a small set of reusable \emph{representation}
 nodes and \emph{transform} nodes joined by typed edges, and that composes
 new ideas by bridging these nodes through retrieval and traversal tools.
@@ -125,51 +127,6 @@ generation, traversal, and evaluation call, revealing that the ReprNet agent
 spends 43--95$\times$ more tokens per idea, concentrated in input-side
 traversal context rather than longer outputs, and identifying the most
 impactful direction for follow-on engineering.
-
-\section{Related Work}
-
-\paragraph{LLM-based research ideation.}
-Prior ideation benchmarks have measured what LLMs can produce but not
-whether literature representation matters.  Recent studies show that
-LLM-generated ideas can rival human-written proposals on novelty while
-still trailing on feasibility, grounding, and diversity
-\citep{si2024llmsgeneratenovelresearch,kumar2025largelanguagemodelsunlock};
-IdeaBench supplies target-paper and reference-paper contexts for
-biomedical ideation, and AI Idea Bench scales the protocol to AI papers
-across multiple evaluation views
-\citep{guo2025ideabench,qiu2025aiideabench}.  These efforts motivate our
-matched-source protocol, but none isolates the causal effect of the
-underlying literature representation.  El Agente Creativo is designed
-specifically to ask the narrower counterfactual question: does a graph
-view of the same papers improve generation over flat prompting?
-
-\paragraph{Structured representations for ideation.}
-A growing literature already pre-structures the literature before
-ideation, but none of these systems isolates the representation effect.
-SciMON optimizes scientific inspirations for novelty, SciDeator recombines
-research-paper facets, and Idea-Catalyst decomposes research problems
-before retrieving and ranking cross-domain source insights
-\citep{wang2024scimon,radensky2024scideator,kargupta2026ideacatalyst}.  In
-parallel, knowledge-grounded and agentic discovery systems---KG-CoI,
-SciAgents, The AI Scientist, and Robin---wire graphs, tool use, or
-multi-agent loops into broader hypothesis-generation workflows
-\citep{xiong2024kgcoi,ghafarollahi2024sciagents,lu2024aiscientistfullyautomated,ghareeb2025robin}.
-El Agente Creativo is complementary to these systems: rather than building
-a full discovery agent, it isolates the representation layer and benchmarks
-graph-conditioned ideation head-to-head against a shuffled-abstract
-baseline that holds the source pool identical.
-
-\paragraph{Evaluation methodology.}
-Evaluation choices materially shape what one can claim about generated
-science, and existing protocols do not provide a calibrated scale.
-OpenNovelty grounds novelty assessment in retrieved supporting evidence,
-and ScholarEval targets literature-grounded research-idea evaluation
-\citep{zhang2026opennovelty,moussa2025scholareval}.  Our protocol is
-lighter-weight than a full novelty audit but adds two features tailored to
-the present question: a calibration step that recovers the ICLR
-oral-vs-poster gap before any generated-idea claim is made, and per-call
-token observability that exposes the quality--cost tradeoff hidden inside
-agent pipelines.
 
 \section{The El Agente Creativo Pipeline}
 
@@ -859,6 +816,53 @@ retrieval, and principled early stopping---and, symmetrically, on the
 flat side through retrieval over distilled paper representations
 rather than full abstracts.  Both directions sit on the
 quality-equivalent Pareto frontier identified by this paper.
+
+
+\section{Related Work}
+
+\paragraph{LLM-based research ideation.}
+Prior ideation benchmarks have measured what LLMs can produce but not
+whether literature representation matters.  Recent studies show that
+LLM-generated ideas can rival human-written proposals on novelty while
+still trailing on feasibility, grounding, and diversity
+\citep{si2024llmsgeneratenovelresearch,kumar2025largelanguagemodelsunlock};
+IdeaBench supplies target-paper and reference-paper contexts for
+biomedical ideation, and AI Idea Bench scales the protocol to AI papers
+across multiple evaluation views
+\citep{guo2025ideabench,qiu2025aiideabench}.  These efforts motivate our
+matched-source protocol, but none isolates the causal effect of the
+underlying literature representation.  El Agente Creativo is designed
+specifically to ask the narrower counterfactual question: does a graph
+view of the same papers improve generation over flat prompting?
+
+\paragraph{Structured representations for ideation.}
+A growing literature already pre-structures the literature before
+ideation, but none of these systems isolates the representation effect.
+SciMON optimizes scientific inspirations for novelty, SciDeator recombines
+research-paper facets, and Idea-Catalyst decomposes research problems
+before retrieving and ranking cross-domain source insights
+\citep{wang2024scimon,radensky2024scideator,kargupta2026ideacatalyst}.  In
+parallel, knowledge-grounded and agentic discovery systems---KG-CoI,
+SciAgents, The AI Scientist, and Robin---wire graphs, tool use, or
+multi-agent loops into broader hypothesis-generation workflows
+\citep{xiong2024kgcoi,ghafarollahi2024sciagents,lu2024aiscientistfullyautomated,ghareeb2025robin}.
+El Agente Creativo is complementary to these systems: rather than building
+a full discovery agent, it isolates the representation layer and benchmarks
+graph-conditioned ideation head-to-head against a shuffled-abstract
+baseline that holds the source pool identical.
+
+\paragraph{Evaluation methodology.}
+Evaluation choices materially shape what one can claim about generated
+science, and existing protocols do not provide a calibrated scale.
+OpenNovelty grounds novelty assessment in retrieved supporting evidence,
+and ScholarEval targets literature-grounded research-idea evaluation
+\citep{zhang2026opennovelty,moussa2025scholareval}.  Our protocol is
+lighter-weight than a full novelty audit but adds two features tailored to
+the present question: a calibration step that recovers the ICLR
+oral-vs-poster gap before any generated-idea claim is made, and per-call
+token observability that exposes the quality--cost tradeoff hidden inside
+agent pipelines.
+
 
 \section{Limitations}
 
